@@ -54,7 +54,6 @@ def text_to_speech(text,fastpitch_model, hifigan_model, output_file="output.wav"
 #    12787  LikeManyWaters
 
         spectrogram = fastpitch_model.generate_spectrogram(tokens=parsed,speaker=92)
-        
         # Convert spectrogram to audio
         audio = hifigan_model.convert_spectrogram_to_audio(spec=spectrogram)
         
